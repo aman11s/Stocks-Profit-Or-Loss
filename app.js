@@ -60,6 +60,9 @@ function errorHandler() {
     if(c === '') {
         showMessage(msg);
     }
+    if(p < 0 || q < 0 || c < 0) {
+        showMessage("Please enter a valid number!!");
+    }
 }
 
 function clickHandler() {
