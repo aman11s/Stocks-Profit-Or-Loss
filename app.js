@@ -36,17 +36,33 @@ function calculateProftAndLoss(purchase, quantity, current) {
     } else {
         showMessage("Neither profit nor loss!");
     }
+    errorHandler();
+    
 }
 
 function showMessage(msg) {
     message.innerText = msg;
 }
 
+function errorHandler() {
+    let p = purchasePrice.value;
+    let q = stockQuantity.value;
+    let c = currentPrice.value;
+    if(p === ''){
+        showMessage("Please fill out all Fields!!");
+    }
+    if(q === '') {
+        showMessage("Please fill out all Fields");
+    }
+    if(c === '') {
+        showMessage("Please fill out all Fields");
+    }
+}
+
 function clickHandler() {
     pp = Number(purchasePrice.value);
     quant = Number(stockQuantity.value);
     curr = Number(currentPrice.value);
-
     calculateProftAndLoss(pp, quant, curr);
 }
 
