@@ -28,7 +28,8 @@ function calculateProftAndLoss(purchase, quantity, current) {
     if(current > purchase) {
         let profit = (current - purchase) * quantity;
         let profitPercentage = (profit / purchase) * 100;
-        showMessage(`You gained ${profitPercentage.toFixed(2)}%. Your total profit is ${profit.toFixed(2)}`)
+        message.style.color = "#26c40e";
+        message.innerText = `You gained ${profitPercentage.toFixed(2)}%. Your total profit is ${profit.toFixed(2)}`;
     } else if(purchase > current) {
         let loss = (purchase - current) * quantity;
         let lossPercentage = (loss / purchase) * 100;
@@ -42,20 +43,22 @@ function calculateProftAndLoss(purchase, quantity, current) {
 
 function showMessage(msg) {
     message.innerText = msg;
+    message.style.color = "#f50a16";
 }
 
 function errorHandler() {
     let p = purchasePrice.value;
     let q = stockQuantity.value;
-    let c = currentPrice.value;
+    let c = currentPrice.value; 
+    let msg = "Please fill out all Fields!!"
     if(p === ''){
-        showMessage("Please fill out all Fields!!");
+        showMessage(msg);
     }
     if(q === '') {
-        showMessage("Please fill out all Fields");
+        showMessage(msg);
     }
     if(c === '') {
-        showMessage("Please fill out all Fields");
+        showMessage(msg);
     }
 }
 
