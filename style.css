@@ -1,15 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color : #1b82e3;
+}
+
 body {
-    text-align: center;
+    font-family: 'Lato', sans-serif;
 }
 
 .container {
+    margin: 1em;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    width: 60vw;
-    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    margin: 1em;
+}
+
+label {
+    margin: 0.5em;
 }
 
 input {
     margin: 1em;
+    padding: 0.5em;
+    font-size: 0.8em;
 }
 
+::placeholder {
+    text-align: center;
+}
+
+#check-btn {
+    padding: 0.8em;
+    margin: 1em;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.2em;
+}
+
+#check-btn:hover {
+    background-color: #1272cc;
+    cursor: pointer;
+}
+
+#message {
+    margin: 1em;
+}
