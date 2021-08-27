@@ -38,3 +38,16 @@ function calculateProftAndLoss(purchase, quantity, current) {
     }
 }
 
+function showMessage(msg) {
+    message.innerText = msg;
+}
+
+function clickHandler() {
+    pp = Number(purchasePrice.value);
+    quant = Number(stockQuantity.value);
+    curr = Number(currentPrice.value);
+
+    calculateProftAndLoss(pp, quant, curr);
+}
+
+checkButton.addEventListener("click", clickHandler);
