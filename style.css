@@ -20,6 +20,7 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 5em;
 }
 
 h1 {
@@ -57,4 +58,28 @@ input {
 #message {
     margin: 1em;
     font-size: larger;
+}
+
+.list-item-inline {
+    display: inline-block;
+}
+
+.footer {
+    background-color: var(--primary-blue);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.footer i {
+    color: var(--primary-color);
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.footer i:hover {
+    color: #1272cc;
 }
