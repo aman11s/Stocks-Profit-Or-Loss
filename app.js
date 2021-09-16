@@ -27,12 +27,12 @@ function calculateProftAndLoss(purchase, quantity, current) {
     
     if(current > purchase) {
         let profit = (current - purchase) * quantity;
-        let profitPercentage = (profit / purchase) * 100;
+        let profitPercentage = ((current - purchase) / purchase) * 100;
         message.style.color = "#26c40e";
         message.innerText = `You gained ${profitPercentage.toFixed(2)}%. Your total profit is ${profit.toFixed(2)}`;
     } else if(purchase > current) {
         let loss = (purchase - current) * quantity;
-        let lossPercentage = (loss / purchase) * 100;
+        let lossPercentage = ((purchase - current) / purchase) * 100;
         showMessage(`You lost ${lossPercentage.toFixed(2)}%. Your total loss is ${loss.toFixed(2)}`)
     } else {
         showMessage("Neither profit nor loss!");
